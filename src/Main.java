@@ -15,15 +15,10 @@ public class Main {
         fruits.add("Potato");
         fruits.add("Dragonfruit");
 
-        int index = fruits.indexOf("Kiwi");     // 없는 값은 -1
-        System.out.println(index);
+        List<String> subFruits = fruits.subList(0, 2);      // 0~(2-1) 인덱스
 
-        fruits.set(1, "Orange");                // 1번 인덱스에 오렌지 추가
-        System.out.println(fruits.get(1));      // 1번 인덱스 값 확인
-
-        System.out.println();
-
-        for (String fruit : fruits)
-            System.out.println(fruit);
+        for (String subFruit : subFruits){
+            System.out.println(subFruit);
+        }
     }
 }
