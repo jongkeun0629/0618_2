@@ -15,8 +15,13 @@ public class Main {
         fruits.add("Potato");
         fruits.add("Dragonfruit");
 
-        fruits.remove("Tomato"); // 값으로 삭제
-        fruits.remove(6);         // 인덱스로 삭제 토마도 삭제 후 순서 변경.
+        int index = fruits.indexOf("Kiwi");     // 없는 값은 -1
+        System.out.println(index);
+
+        fruits.set(1, "Orange");                // 1번 인덱스에 오렌지 추가
+        System.out.println(fruits.get(1));      // 1번 인덱스 값 확인
+
+        System.out.println();
 
         for (String fruit : fruits)
             System.out.println(fruit);
