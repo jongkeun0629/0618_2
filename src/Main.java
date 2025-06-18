@@ -1,24 +1,25 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> listFruits = new ArrayList<>();
-        Set<String> fruits = new HashSet<>();
+        Map<String, Integer> fruitPrices = new HashMap<>();
 
-        listFruits.add("Apple");
-        listFruits.add("Apple");
+        fruitPrices.put("사과", 17980);
+        fruitPrices.put("배", 10320);
+        fruitPrices.put("수박", 15920);
+        fruitPrices.put("멜론", 10630);
 
-        fruits.add("Apple");
-        fruits.add("Apple");
-
-        for (String listFruit: listFruits) {
-            System.out.println(listFruit);
+        // 출력
+        for (Map.Entry<String, Integer> entry : fruitPrices.entrySet()){
+            System.out.println(entry.getKey() + "의 가격은 " + entry.getValue() + "원.");
         }
 
-        System.out.println();
-
-        for (String fruit:fruits) {
-            System.out.println(fruit);
+        // 평균
+        int sum = 0;
+        for(int fruitprice: fruitPrices.values()){
+            sum += fruitprice;
         }
+        System.out.println("평균 : " + sum / fruitPrices.size());
     }
 }
